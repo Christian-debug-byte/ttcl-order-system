@@ -6,6 +6,8 @@ const app = express();
 
 dotenv.config();
 
+app.use("api/products", require("./routes/productRoutes"));
+
 connectDB();
 // Start Server
 const PORT = process.env.PORT || 7000;
